@@ -1,0 +1,3 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.ywb.config.TestConfig,\
+  com.ywb.config.MybatisPlusConfig

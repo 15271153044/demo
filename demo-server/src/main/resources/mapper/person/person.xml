@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.demoserver.test.mapper.PersonMapper">
+
+    <resultMap id="commonMap" type="com.ywb.model.Person">
+        <result column="name" jdbcType="VARCHAR" property="name"/>
+        <result column="age" jdbcType="VARCHAR" property="age"/>
+    </resultMap>
+
+    <sql id="searchCondition">
+        <where>
+            <if test="entity.name !='' and entity.name !=null">
+                and p.name like concat('%',#{entity.name},'%')
+            </if>
+        </where>
+    </sql>
+    <select id="findPerson" resultMap="commonMap">
+        select * from person
+    </select>
+
+
+    <select id="listPersons" resultMap="commonMap">
+        select * from person p
+        <include refid="searchCondition"/>
+    </select>
+</mapper>

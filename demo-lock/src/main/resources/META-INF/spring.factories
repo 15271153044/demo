@@ -1,0 +1,3 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.ywb.comm.lock.aspect.DistributedLockAspect,\
+  com.ywb.comm.lock.service.DistributedLockService
