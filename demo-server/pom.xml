@@ -66,6 +66,12 @@
 
         <dependency>
             <groupId>com.example</groupId>
+            <artifactId>demo-comm</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.example</groupId>
             <artifactId>demo-redis</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
